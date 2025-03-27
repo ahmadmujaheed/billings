@@ -17,9 +17,15 @@ app.use(cookieParser())
 
 const corOptions = {
     origin:process.env.CLIENT_URL || ['http://localhost:3000'],
-    credential:true,
+    credentials:true,
     methods: ["GET", "POST", "PATCH", "PUT", "DELETE"]
 }
+
+// const corOptions = {
+//         origin:process.env.CLIENT_URL || ['http://localhost:3000'],
+//         methods: ["GET", "POST", "PATCH", "PUT", "DELETE"]
+// }
+    
 
 app.use(cors(corOptions))
 
